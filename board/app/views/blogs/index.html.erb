@@ -1,0 +1,6 @@
+<h1>인스타그램</h1>
+<% @posts.each do |p|%>
+<img height="200", width="200" src="<%= p.image.url %>">
+<%= link_to "[보기]", "/posts/#{{p.id}}"%><br>
+<%end%>
+<%= link_to "새 포스트 ",new_post_path%>
